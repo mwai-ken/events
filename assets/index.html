@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ancestral events</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+   <meta content="Kenneth Mwai" name="author" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon1.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+ <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+
+      <!-- App Css-->
+      <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Delicious - v4.7.1
+  * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+ 
+  <style>
+    .popup {
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+       
+    display: none;
+  }
+  .popup-content {
+    background-color:white ;
+     color:black;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 75%;
+  
+    font-weight: bolder;
+  }
+  .popup-content button {
+    display: block;
+    margin: 0  auto;
+  }
+  .show {
+    display: block;
+  }
+  h1 {
+    color: black;
+  }
+      .pop-btn{
+        background: #ffb03b;
+          color: #fff;
+          border-radius: 50px;
+      margin:60px;
+          padding: 10px 25px;
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          transition: 0.3s;
+          white-space: nowrap;
+      }
+
+          .box-close {
+         margin-left:94%;
+          color: #fe0606;
+          text-decoration: none;
+          font-size: 30px;
+      }
+            .box-close:hover {
+        
+          color: #fff;
+          
+      }
+  
+
+            @media (max-width: 360px) {
+   .popup-content {
+  margin:0%;
+    background-color:white ;
+    font-size:10px;
+     width:100vw;
+    height:100vh;
+    overflow:scroll;
+  }
+
+  #header {
+    position: fixed;
+  z-index: 540;
+  left: 0;
+  top: 0;
+}
+  #header .logo img {
+padding: 0;
+margin: 0;
+max-height: 44px;
+max-width: 54px;
+}
+ .pop-btn{
+        background: #ffb03b;
+          color: #fff;
+          border-radius: 50px;
+      margin:10px;
+          padding: 10px 25px;
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          transition: 0.3s;
+          white-space: nowrap;
+      }
+
+
+
+ 
+}
+
+          @media (max-width: 280px) {
+   .popup-content {
+  margin:0%;
+    background-color:white ;
+    font-size:10px;
+     width:100vw;
+    height:100vh;
+    overflow:scroll;
+  }
+
+  #header {
+    position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+}
+  #header .logo img {
+padding: 0;
+margin: 0;
+max-height: 44px;
+max-width: 54px;
+}
+ .pop-btn{
+        background: #ffb03b;
+          color: #fff;
+          border-radius: 50px;
+      margin:10px;
+          padding: 10px 25px;
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          transition: 0.3s;
+          white-space: nowrap;
+      }
+
+
+
+ 
+}
+      @media (max-width: 390px) {
+   .popup-content {
+  margin:0%;
+    background-color:white ;
+    font-size:10px;
+     width:100vw;
+    height:100vh;
+    overflow:scroll;
+  }
+ 
+}
+
+    @media (max-width: 412px) {
+ .container-fluid{
+ background: rgba(26, 24, 22, 0.85);
+ width:100%;
+ height:11vh;
+ }
+   .popup-content {
+    margin:0%;
+    padding:0%;
+    background-color:white ;
+    font-size:9px;
+     width:100vw;
+    height:100vh;
+    overflow:scroll;
+  }
+ 
+}
+
+   @media (max-width: 540px) {
+   .popup-content {
+      margin:0%;
+    background-color:white ;
+    width:100vw;
+    height:100vh;
+    overflow:scroll;
+  }
+      @media (max-width: 768px) {
+       .container-fluid{
+ background: rgba(26, 24, 22, 0.85);
+ width:100%;
+ height:11vh;
+ }
+   .popup-content {
+     margin:0%;
+     padding:10px;
+    width:100vw;
+    height:70vh;
+    overflow:scroll;
+  }
+ 
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-transparent header_class">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+    <div class="logo me-auto">
+     <!--<h1><a href="index.html">Delicious</a></h1>-->
+      <!-- Uncomment below if you prefer to use an image logo -->
+     <h1>  <a href="#"><img src="assets/img/image1.png" width="110px"    alt="" class="imga"></a></h1>
+     
+         
+    </div>
+          
+
+    <nav id="navbar"   class="navbar   ">
+       <ul>
+        <li><a class="nav-link scrollto active " href="<?php echo base_url()?>#hero">Home</a></li>
+        <li><a class="nav-link scrollto " href="<?php echo base_url()?>#about">About</a></li>
+       
+      
+        <li><a class="nav-link scrollto" href="<?php echo base_url()?>#contact">Contact Us</a></li>
+       
+      </ul>
+           <button id="myButton" class="pop-btn  ">
+  Register
+</button>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+   <!--- <a href="<?php echo base_url('register')?>" class="book-a-table-btn scrollto">Register</a>-->
+
+<div id="myPopup" class="popup ">
+  <div class="popup-content">
+   
+   
+    <h1 style="color:orange;">
+      AncestralAfrica !
+    </h1>
+  
+
+                  <?php echo form_open( 'register',array('role'=>'form','data-toggle'=>"validator" ,'class'=>"form-horizontal")) ; ?>
+
+                  <center><u> <h1>Event Registration Form</h1></u></center>
+                   <p>Please Fill in the following details;</p>
+        <div class="row">
+         <label class="control-label col-sm-1" for="address"> Name</label>
+          <div class="col-lg-3 col-md-4 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"  value="" required/>
+            <small style="color:red; font-size: 80%"><?php echo form_error('name');?></small>  
+          </div>
+           <label class="control-label col-sm-1" for="address"> Email</label>
+          <div class="col-lg-3 col-md-4 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"  required>
+             <br><span style="color:red; font-size: 80%"><?php echo form_error('email'); ?></span>
+          </div>
+                       <label class="control-label col-sm-1" for="address"> Contact</label>
+
+          <div class="col-lg-3 col-md-6 form-group mt-3 mt-md-0">
+        <input type="number"  name="phone" class="form-control" id="phone" value="<?php echo set_value('phone')?>" placeholder="Your Phone" >  
+  <br><span style="color:red; font-size: 80%"><?php echo form_error('email'); ?></span>
+         
+          </div>
+        </div><br>
+        <div class="row">
+         <label class="control-label col-sm-1" for="address"> Age</label>
+          <div class="col-lg-3 col-md-4 form-group">
+            <input type="number" name="age" class="form-control" id="age" placeholder="Your Age" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required/>
+                <br><span style="color:red; font-size: 80%"><?php echo form_error('email'); ?></span>
+          </div>
+           <label class="control-label col-sm-1" for="address"> National ID</label>
+          <div class="col-lg-3 col-md-4 form-group mt-3 mt-md-0">
+            <input type="number" class="form-control" name="id_number" id="id_number" placeholder=" ID Number" data-rule="email" data-msg="Please enter a valid email" required/>
+                <br><span style="color:red; font-size: 80%"><?php echo form_error('email'); ?></span>
+          </div>
+                       <label class="control-label col-sm-1" for="address"> Location</label>
+
+          <div class="col-lg-3 col-md-6 form-group mt-3 mt-md-0">
+        <input type="text"  name="location" class="form-control" id="location" value="<?php echo set_value('location')?>" placeholder="Your Location" required/>  
+            <br><span style="color:red; font-size: 80%"><?php echo form_error('email'); ?></span>
+
+         
+          </div>
+        </div><br>
+              <div class="row">
+         <label class="control-label col-sm-1" for="address"> Event</label>
+          <div class="col-lg-3 col-md-4 form-group">
+            <input type="text" name="ev_name" class="form-control" id="ev_name" placeholder="State the event" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required/>
+                <br><span style="color:red; font-size: 80%"><?php echo form_error('email'); ?></span>
+          </div>
+           <label class="control-label col-sm-1" for="address"> Country</label>
+          <div class="col-lg-3 col-md-4 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="country" id="country" placeholder=" Country" data-rule="text" data-msg="Please enter country" required/>
+                <br><span style="color:red; font-size: 80%"><?php echo form_error('email'); ?></span>
+          </div>
+           
+        
+        </div><br>
+       
+    
+     
+<button id="closePopup" class='btn btn-danger btn-sm btn-rounded waves-effect waves-light' style=" margin-right:84%;">
+      Close
+    </button>       
+              
+
+    
+       <div class="text-right ">
+                <button type="submit" style="background-color:orange;"class="btn  w-7 float-right"><i class="mdi mdi-account-plus-outline me-1"></i>Submit</button>
+                </div>
+
+      </form>
+    
+  </div>
+</div>
+  </div>
+
+  
+
+
+
+
+  <script>
+  myButton.addEventListener("click", function () {
+    myPopup.classList.add("show");
+  });
+  closePopup.addEventListener("click", function () {
+    myPopup.classList.remove("show");
+  });
+  window.addEventListener("click", function (event) {
+    if (event.target == myPopup) {
+      myPopup.classList.remove("show");
+    }
+  });
+</script>
+</header><!-- End Header -->
+
+
+  
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url(assets/img/slide/imag-1.jpeg); background-size: cover; background-position:center">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                     
+                
+                <h2 class="animate__animated animate__fadeInDown"><span>Ancestral</span> Africa</h2>
+                <p class="animate__animated animate__fadeInUp">We are building an impressive track record of creating value and advancing the development of the continent—and its many economies.</p>
+                <div>
+                  <!--<a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>---->
+                  <a href="#about" class="btn-event animate__animated animate__fadeInUp scrollto">View Event Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+     
+
+        </div>
+
+      
+
+      
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about" style="background: #e6e4e1;">
+      <div class="container-fluid">
+    
+    
+  
+        <div class="row">
+
+          
+            <div class="col-lg-5 align-items-stretch about-image" style='background-image: url("assets/img/nature-7.jpg");'>
+          </div>
+
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+
+            <div class="content">
+             <h1>About <span>Us</span></h1>
+              <p>
+                  
+ 
+
+        Ancestral Purpose
+        We are connecting producers and consumers of goods and services across Africa through technology-driven go-to-market information and expertise.
+                      </p>
+              <p class="fst-italic">
+
+          Ancestral Values              </p>
+              <ul>
+                <li><i class="bx bx-check-double"></i> Fair</li>
+                <li><i class="bx bx-check-double"></i> Transparent</li>
+                <li><i class="bx bx-check-double"></i> Accountable</li>
+                 <li><i class="bx bx-check-double"></i> Wealth Creating</li>
+                <li><i class="bx bx-check-double"></i> Trustworthy</li>
+                <li><i class="bx bx-check-double"></i> Sustainable</li>
+              </ul>
+
+             
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Whu Us Section ======= -->
+    <section id="why-us" class="why-us"style="background: white;" >
+      <div class="container">
+
+        <div class="whysection-title">
+          <h2>Ancestral Africa <span>Events</span></h2>
+          <p>                 The promise of Africa has through our history hovered above us almost like an ideal, something wished for but unattainable, whereas the African land space is variously blessed in resources and abundant talent to fulfill this promise.
+.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" >
+              <span>Wedding</span>
+              <h4>Summary</h4>
+              <p>                 The promise of Africa has through our history hovered above us almost like an ideal, something wished for but unattainable, whereas the African land space is variously blessed in resources and abundant talent to fulfill this promise.
+</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" >
+              <span>Graduation Ceremony</span>
+              <h4>Summary</h4>
+              <p>                 The promise of Africa has through our history hovered above us almost like an ideal, something wished for but unattainable, whereas the African land space is variously blessed in resources and abundant talent to fulfill this promise.
+</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" >
+              <span>Birthday Parties</span>
+              <h4> Summary</h4>
+              <p>                 The promise of Africa has through our history hovered above us almost like an ideal, something wished for but unattainable, whereas the African land space is variously blessed in resources and abundant talent to fulfill this promise.
+</p>
+            </div>
+          </div>
+
+        </div><br><br>
+              <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box">
+              <span>Promotion Events</span>
+              <h4>Summary</h4>
+              <p>                 The promise of Africa has through our history hovered above us almost like an ideal, something wished for but unattainable, whereas the African land space is variously blessed in resources and abundant talent to fulfill this promise.
+</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" >
+              <span>Celebrity Events</span>
+              <h4>Summary</h4>
+              <p>                 The promise of Africa has through our history hovered above us almost like an ideal, something wished for but unattainable, whereas the African land space is variously blessed in resources and abundant talent to fulfill this promise.
+</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" >
+              <span>Company Competition Events</span>
+              <h4>Summary</h4>
+              <p>                 The promise of Africa has through our history hovered above us almost like an ideal, something wished for but unattainable, whereas the African land space is variously blessed in resources and abundant talent to fulfill this promise.
+</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Whu Us Section -->
+
+  
+
+ 
+
+
+    
+  
+    <!-- ======= Chefs Section ======= -->
+    <section id="chefs" class="chefs" style="background: #e6e4e1;" >
+      <div class="container">
+
+        <div class="section-title">
+          <h3><u>Main Purpose</u></h3>
+              <p style="font-size:37px; background:orange; font-weight:bold; cursor:pointer; border:groove; width:64%;">
+          
+
+      <strong> Connecting Buyers and Sellers</strong>
+
+              </p>
+        </div>
+
+      
+
+      </div>
+    </section><!-- Chairman Section -->
+  
+
+ 
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials" style="background-image: url(assets/img/slide/learning.jpg); background-size: cover; background-position:center">
+      <div class="container position-relative">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Mr Andrew  </h3>
+                <h4>Chairman</h4>
+                
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                 The promise of Africa has through our history hovered above us almost like an ideal, something wished for but unattainable, whereas the African land space is variously blessed in resources and abundant talent to fulfill this promise.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            
+
+           
+
+            
+
+            
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+        <!-- =======Vision and Mission Section ======= -->
+    <section id="vision-mission" class="vision-mission"  style="background: #e6e4e1;">
+      <div class="container">
+
+        
+
+        <div class="row">
+
+       <div class="col-lg-6">
+            <div class="col-left" style="background: #fff;">
+           <h1> Vis<span style="color: orange;">io</span>n</h1>
+              <!--<h4>Lorem Ipsum</h4>-->
+              <p>To create most of the effective solutions ever used and make a difference in terms of technology.</p>
+            
+          </div>
+            </div>
+           <div class="col-lg-6">
+            <div class="col-right" style="background: #fff;">
+            <h1> Miss<span  style="color: orange;">io</span>n</h1>
+              <!--<h4>Lorem Ipsum</h4>-->
+              <p>To attract more people to our Products, and be an influence to many People all round.</p>
+           
+          </div>
+           </div>
+
+         
+
+         
+
+        </div>
+       
+
+      </div>
+    </section><!-- End Whu Us Section -->
+
+   
+            
+    <!-- ======= Whu Us Section ======= -->
+    <section id="contact" class="contact" >
+      <div class="container">
+<br>
+        <div class="contact-title">
+          <h1>Contact <span>Info</span></h1>
+        
+        </div>
+<br><br>
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" >
+             <img src="assets/img/web1.png" class="contact-img" alt="">
+              <h1>Website</h1>
+                            <h2><a href="ancestralafric.com">ancestralafric.com</a></h2>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" >
+               <img src="assets/img/email.png" class="contact-img" alt="">
+              <h1>Email</h1>
+                            <h2><a href=mailto:"ancestralafrica@gmail.com ">ancestralafrica@gmail.com </a></h2>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" >
+             <img src="assets/img/location1.png" class="contact-img" alt="">
+             <h1>Address</h1>
+              <h2>Riverside Square, 8th Floor, West Wing,<br>
+                  Riverside Drive<br>P.O Box 856 00606 Nairobi, Kenya
+                  .</br>
+                   +254 720 367-3094<br>
+                  +254 703 041-094
+                  </h2>
+            </div>
+          </div>
+
+      
+      
+
+      </div>
+    </section><!-- End Whu Us Section -->
+
+   
+
+  </main><!-- End #main -->
+
+   
+ 
+ 
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
+
+    <div class="container">
+           
+
+     
+      <div class="brand"><h1><span>A</span>ncestral <span>Af</span>rica</h1></div>
+      <h2> Seeks to contribute to an economic and socially balanced and sustainable Africa</h2>
+     <!--<h3>To get in touch with us</h3>
+       <p><i style="background-color: #e6e4e1; color: black; border-radius: 10%;" class="bi bi-envelope"></i> Email:<a href=mailto:"ancestralafrica@gmail.com ">ancestralafrica@gmail.com </a><br>
+        <i style="background-color: #e6e4e1; color: black; border-radius: 10%;" class="bi bi-phone"></i> Contact:<a href=Tel:"0725236344 ">0725236344</a>
+       </p>--> 
+ 
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+       <!--<a href="#" class="gmail"><i class="bx bxl-gmail"></i></a>---> 
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Ancestral Africa</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Ken <script>document.write(new Date().getFullYear())</script>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+   
+ 
+ 
+ <!-- ======= Footer ======= -->
+ <!-- <footer id="footer">
+
+  <div class="container">
+          <h1> <img src="assets/img/image1.png" width="130px"    alt="" class=""></h1>
+
+    <h3>Ancestral Africa</h3>
+    <p> Seeks to contribute to an economic and socially balanced and sustainable Africa</p>
+    <h5>To get in touch with us</h5>
+     <p> Email:<a href=mailto:"ancestralafrica@gmail.com ">ancestralafrica@gmail.com </a><br>
+     Contact:<a href=Tel:"0725236344 ">0725236344</a>
+     </p> -->
+
+    <div class="social-links">
+      <!---<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>-->
+    </div>
+    <!-- <div class="copyright">
+      &copy; Copyright <strong><span>Ancestral Africa</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by Ken <script>document.write(new Date().getFullYear())</script>
+    </div>
+  </div> -->
+</footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js')?>"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>
+
+  
+ 
